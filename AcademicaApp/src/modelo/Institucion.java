@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import datos.Operacion;
 import java.util.Date;
 
 /**
@@ -39,6 +40,15 @@ public class Institucion {
     public void setFechaRegistro(Date fechaRegistro) {
         this.fechaRegistro = fechaRegistro;
     }
-    
+    /*Agregamos una nueva institucion*/
+    public void agregarInstitucion(){
+        //Crear un objeto de la clase Operación
+        Operacion operacion = new Operacion();
+        //Instrucción SQL para agregar institucion
+        String sql ="insert into institucion(nombre_institucion) values('"+this.nombreInstitucion+"')";
+        //Enviámos la instrucción SQL al método ejecutar
+        operacion.ejecutar(sql);
+        
+    }
     
 }
