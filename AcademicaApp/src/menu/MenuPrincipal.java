@@ -13,6 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import vista.carrera.AgregarCarrera;
 import vista.institucion.AgregarInstitucion;
 
 /**
@@ -146,6 +147,12 @@ public class MenuPrincipal extends javax.swing.JFrame implements ActionListener,
            AgregarInstitucion agregarInstitucion = new AgregarInstitucion();
            agregarInstitucion.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
            agregarInstitucion.setVisible(true);
+       }
+        if(e.getSource() == itemAgregarCarrera){
+           //Iniciamos el JFrameForm para agregar carrera
+           AgregarCarrera agregarCarrera= new AgregarCarrera();
+           agregarCarrera.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+           agregarCarrera.setVisible(true);
        }
     
     }
